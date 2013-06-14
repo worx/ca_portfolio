@@ -318,7 +318,7 @@ function ca_portfolio_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Portfolio';
+  $display->title = '';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();

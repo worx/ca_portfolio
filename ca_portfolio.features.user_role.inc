@@ -13,7 +13,7 @@ function ca_portfolio_user_default_roles() {
   // Exported role: portfolio admin.
   $roles['portfolio admin'] = array(
     'name' => 'portfolio admin',
-    'weight' => '6',
+    'weight' => 6,
     'machine_name' => 'portfolio_admin',
   );
 
