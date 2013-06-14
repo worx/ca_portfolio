@@ -46,7 +46,7 @@ function ca_portfolio_menu_alter(&$items) {
  */
 function ca_portfolio_panels_pre_render($panel, $renderer) {
   foreach ($panel->content as $key => $value) {
-    if ($value->subtype == 'ca_portfolio-ca_portfolio_list_1') {
+    if ($value->subtype == 'ca_portfolio_list-ca_portfolio_list_1') {
       $panel->title = variable_get('ca_portfolio_panel_title', 'Portfolios');
     }
   }
