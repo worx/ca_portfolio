@@ -41,6 +41,8 @@ function ca_portfolio_default_page_manager_handlers() {
       ),
       'logic' => 'and',
     ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-portfolio-node ca-portfolio-node-template-1',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -212,6 +214,8 @@ function ca_portfolio_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-admin ca-portfolio-admin',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -307,6 +311,8 @@ function ca_portfolio_default_page_manager_pages() {
       ),
       'logic' => 'and',
     ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-portfolio-list ca-portfolio-list-template-1',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
