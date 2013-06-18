@@ -60,9 +60,10 @@ function ca_portfolio_field_default_field_instances() {
         'manualcrop_instant_preview' => 1,
         'manualcrop_maximize_default_crop_area' => 0,
         'manualcrop_require_cropping' => array(
-          'portfolio_medium' => 'portfolio_medium',
+          'crop_medium_square' => 'crop_medium_square',
         ),
         'manualcrop_styles_list' => array(
+          'crop_medium_square' => 'crop_medium_square',
           'portfolio_medium' => 'portfolio_medium',
         ),
         'manualcrop_styles_mode' => 'include',
