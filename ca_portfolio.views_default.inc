@@ -247,6 +247,8 @@ function ca_portfolio_views_default_views() {
   $handler = $view->new_display('panel_pane', 'CA Portfolio: Admin', 'ca_portfolio_admin');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pane_title'] = 'CA Portfolio: Admin';
+  $handler->display->display_options['pane_category']['name'] = 'CA Admin';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $export['ca_portfolio_admin'] = $view;
 
   $view = new view();
@@ -334,6 +336,8 @@ function ca_portfolio_views_default_views() {
   $handler = $view->new_display('panel_pane', 'CA Portfolio: List Template One', 'ca_portfolio_list_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pane_title'] = 'CA Portfolio: List Template One';
+  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $export['ca_portfolio_list'] = $view;
 
   $view = new view();
@@ -380,7 +384,7 @@ function ca_portfolio_views_default_views() {
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['settings'] = array(
-    'image_style' => 'portfolio_medium',
+    'image_style' => 'crop_medium_square',
     'image_link' => '',
   );
   /* Sort criterion: Content: Title */
@@ -415,6 +419,39 @@ function ca_portfolio_views_default_views() {
   $handler = $view->new_display('panel_pane', 'CA Portfolio: Node Template One', 'ca_portfolio_node_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pane_title'] = 'CA Portfolio: Node Template One';
+  $handler->display->display_options['pane_category']['name'] = 'CA Node';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+
+  /* Display: CA Portfolio: Node Template Two */
+  $handler = $view->new_display('panel_pane', 'CA Portfolio: Node Template Two', 'ca_portfolio_node_2');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Website */
+  $handler->display->display_options['fields']['field_ca_portfolio_p_website']['id'] = 'field_ca_portfolio_p_website';
+  $handler->display->display_options['fields']['field_ca_portfolio_p_website']['table'] = 'field_data_field_ca_portfolio_p_website';
+  $handler->display->display_options['fields']['field_ca_portfolio_p_website']['field'] = 'field_ca_portfolio_p_website';
+  $handler->display->display_options['fields']['field_ca_portfolio_p_website']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_portfolio_p_website']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_portfolio_p_website']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_portfolio_p_website']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_ca_portfolio_p_website']['type'] = 'link_plain';
+  /* Field: Content: Screenshot */
+  $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['id'] = 'field_ca_portfolio_p_screenshot';
+  $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['table'] = 'field_data_field_ca_portfolio_p_screenshot';
+  $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['field'] = 'field_ca_portfolio_p_screenshot';
+  $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['alter']['path'] = '[field_ca_portfolio_p_website]';
+  $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['alter']['target'] = '_blank';
+  $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['settings'] = array(
+    'image_style' => 'crop_large_landscape',
+    'image_link' => '',
+  );
+  $handler->display->display_options['pane_title'] = 'CA Portfolio: Node Template Two';
+  $handler->display->display_options['pane_category']['name'] = 'CA Node';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $export['ca_portfolio_node'] = $view;
 
   return $export;
