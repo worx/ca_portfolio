@@ -64,6 +64,7 @@ function ca_portfolio_field_default_field_instances() {
         ),
         'manualcrop_styles_list' => array(
           'crop_medium_square' => 'crop_medium_square',
+          'crop_large_square' => 'crop_large_square',
           'portfolio_medium' => 'portfolio_medium',
         ),
         'manualcrop_styles_mode' => 'include',
