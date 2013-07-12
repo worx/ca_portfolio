@@ -295,6 +295,8 @@ function ca_portfolio_views_default_views() {
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['alter']['path'] = '[field_ca_portfolio_p_website]';
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['settings'] = array(
     'image_style' => 'crop_medium_square',
@@ -382,6 +384,8 @@ function ca_portfolio_views_default_views() {
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['alter']['path'] = '[field_ca_portfolio_p_website]';
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['settings'] = array(
     'image_style' => 'crop_medium_square',
@@ -444,6 +448,8 @@ function ca_portfolio_views_default_views() {
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['alter']['path'] = '[field_ca_portfolio_p_website]';
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_portfolio_p_screenshot']['settings'] = array(
     'image_style' => 'crop_large_landscape',
