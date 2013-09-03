@@ -348,6 +348,18 @@ function ca_portfolio_views_default_views() {
   $handler->display->display_options['pane_title'] = 'CA Portfolio: List Template One';
   $handler->display->display_options['pane_category']['name'] = 'CA List';
   $handler->display->display_options['pane_category']['weight'] = '0';
+
+  /* Display: Feed */
+  $handler = $view->new_display('feed', 'Feed', 'ca_portfolio_feed');
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'rss';
+  $handler->display->display_options['row_plugin'] = 'node_rss';
+  $handler->display->display_options['path'] = 'portfolio/feed';
+  $handler->display->display_options['displays'] = array(
+    'ca_portfolio_list_1' => 'ca_portfolio_list_1',
+    'default' => 0,
+  );
   $export['ca_portfolio_list'] = $view;
 
   $view = new view();
