@@ -34,9 +34,9 @@ function ca_portfolio_settings_form() {
   $form['ca_portfolio_list_count'] = array(
     '#type' => 'textfield',
     '#title' => t('Case Studies per page'),
-    '#default_value' => variable_get('ca_portfolio_list_count', 5),
+    '#default_value' => variable_get('ca_portfolio_list_count', 12),
     '#required' => TRUE,
-    '#description' => t('How many case studies would you like displayed per page?'),
+    '#description' => t('How many case studies would you like displayed per page? Suggested in groups for 3.'),
   );
   $form['ca_portfolio_block_count'] = array(
     '#type' => 'textfield',
@@ -45,24 +45,12 @@ function ca_portfolio_settings_form() {
     '#required' => TRUE,
     '#description' => t('How many case studies would you like displayed in the block?'),
   );
-  $form['ca_portfolio_list_template'] = array(
-    '#type' => 'select',
-    '#title' => t('Portfolio\'s list template'),
-    '#options' => array(
-      'ca_portfolio_list_template_one' => t('Template one'),
-      'ca_portfolio_list_template_two' => t('Template two'),
-      'ca_portfolio_list_template_three' => t('Template three'),
-    ),
-    '#required' => TRUE,
-    '#default_value' => variable_get('ca_portfolio_list_template', 'ca_portfolio_list_template_one'),
-  );
   $form['ca_portfolio_node_template'] = array(
     '#type' => 'select',
     '#title' => t('Portfolio\'s node template'),
     '#options' => array(
       'ca_portfolio_node_template_one' => t('Template one'),
       'ca_portfolio_node_template_two' => t('Template two'),
-      'ca_portfolio_node_template_three' => t('Template three'),
     ),
     '#required' => TRUE,
     '#default_value' => variable_get('ca_portfolio_node_template', 'ca_portfolio_node_template_one'),
