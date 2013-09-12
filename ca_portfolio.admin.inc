@@ -38,13 +38,6 @@ function ca_portfolio_settings_form() {
     '#required' => TRUE,
     '#description' => t('How many case studies would you like displayed per page? Suggested in groups for 3.'),
   );
-  $form['ca_portfolio_block_count'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Case Studies in the block'),
-    '#default_value' => variable_get('ca_portfolio_block_count', 1),
-    '#required' => TRUE,
-    '#description' => t('How many case studies would you like displayed in the block?'),
-  );
   $form['ca_portfolio_node_template'] = array(
     '#type' => 'select',
     '#title' => t('Portfolio\'s node template'),
