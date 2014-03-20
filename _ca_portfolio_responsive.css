@@ -1,0 +1,52 @@
+.ca-portfolio-list table, 
+.ca-portfolio-list tbody, 
+.ca-portfolio-list tr, 
+.ca-portfolio-list tr td, 
+.ca-portfolio-list-term table, 
+.ca-portfolio-list-term tbody, 
+.ca-portfolio-list-term tr, 
+.ca-portfolio-list-term tr td {
+  display:block;
+  width: 100%;
+  border: none;
+}
+
+.ca-portfolio-list tr td, 
+.ca-portfolio-list-term tr td {
+  float: left;
+  padding: 0;
+  vertical-align: text-top;
+  text-align: center;
+}
+
+.pane-ca-portfolio-list-ca-portfolio-list-1 .views-field-title {
+  max-width: none;
+}
+
+@media only screen and (min-width:481px) {
+  .ca-portfolio-list tr td, .ca-portfolio-list-term tr td {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 659px) {
+  .ca-portfolio-list tr:nth-child(1) td:nth-child(2n + 1), .ca-portfolio-list-term tr:nth-child(1) td:nth-child(2n + 1) {clear: left;}
+  .ca-portfolio-list tr:nth-child(2) td:nth-child(2), .ca-portfolio-list-term tr:nth-child(2) td:nth-child(2) {clear: left;}
+  .ca-portfolio-list tr:nth-child(3) td:nth-child(2n + 1), .ca-portfolio-list-term tr:nth-child(3) td:nth-child(2n + 1) {clear: left;}
+}
+
+@media only screen and (min-width:760px) {
+  .ca-portfolio-list table, 
+  .ca-portfolio-list tbody, 
+  .ca-portfolio-list-term table, 
+  .ca-portfolio-list-term tbody {display: table;}
+  .ca-portfolio-list tr, 
+  .ca-portfolio-list-term tr {display: table-row;}
+  .ca-portfolio-list td, 
+  .ca-portfolio-list-term tr td {display: table-celll;}
+
+  .ca-portfolio-list tr td, .ca-portfolio-list-term tr td {
+    padding: 0;
+    width: 33%;
+  }
+}
