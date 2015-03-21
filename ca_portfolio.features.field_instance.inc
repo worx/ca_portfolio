@@ -58,6 +58,7 @@ function ca_portfolio_field_default_field_instances() {
         'manualcrop_inline_crop' => 0,
         'manualcrop_instant_crop' => 1,
         'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => TRUE,
         'manualcrop_maximize_default_crop_area' => 0,
         'manualcrop_require_cropping' => array(
           'portfolio_medium' => 'portfolio_medium',
@@ -101,6 +102,7 @@ function ca_portfolio_field_default_field_instances() {
     'label' => 'Website',
     'required' => 1,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -113,6 +115,7 @@ function ca_portfolio_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'title' => 'none',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
