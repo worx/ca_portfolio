@@ -24,34 +24,6 @@ function ca_portfolio_views_api($module = NULL, $api = NULL) {
 }
 
 /**
- * Implements hook_image_default_styles().
- */
-function ca_portfolio_image_default_styles() {
-  $styles = array();
-
-  // Exported image style: portfolio_medium.
-  $styles['portfolio_medium'] = array(
-    'effects' => array(
-      5 => array(
-        'name' => 'manualcrop_crop_and_scale',
-        'data' => array(
-          'width' => 220,
-          'height' => 220,
-          'upscale' => 0,
-          'respectminimum' => 1,
-          'onlyscaleifcrop' => 0,
-          'style_name' => 'portfolio_medium',
-        ),
-        'weight' => 0,
-      ),
-    ),
-    'label' => 'portfolio_medium',
-  );
-
-  return $styles;
-}
-
-/**
  * Implements hook_node_info().
  */
 function ca_portfolio_node_info() {
