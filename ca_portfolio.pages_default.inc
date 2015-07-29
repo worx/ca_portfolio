@@ -240,6 +240,83 @@ function ca_portfolio_default_page_manager_pages() {
     'submitted_context' => 'empty',
   );
   $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_portfolio_add_portfolio__panel_context_0d871fb7-4130-4093-b082-c52a41899fdc';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_portfolio_add_portfolio';
+  $handler->handler = 'panel_context';
+  $handler->weight = 1;
+  $handler->conf = array(
+    'title' => 'Aurora  Portfolio: Add Portfolil',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => '',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '278eef2a-2d52-44fb-ab9a-5c6c10831326';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-a8f24ef1-f6aa-439c-892a-9f73cddd3da4';
+    $pane->panel = 'first-first';
+    $pane->type = 'context_admin';
+    $pane->subtype = 'context_admin:node_create_menu';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context_admin_options' => 'node_create_menu',
+      'context_admin_options_items' => 'ca_portfolio',
+      'context_admin_use_node_edit' => 0,
+      'context' => 'empty',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'a8f24ef1-f6aa-439c-892a-9f73cddd3da4';
+    $display->content['new-a8f24ef1-f6aa-439c-892a-9f73cddd3da4'] = $pane;
+    $display->panels['first-first'][0] = 'new-a8f24ef1-f6aa-439c-892a-9f73cddd3da4';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-a8f24ef1-f6aa-439c-892a-9f73cddd3da4';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
   $pages['ca_portfolio_add_portfolio'] = $page;
 
   $page = new stdClass();
@@ -342,6 +419,62 @@ function ca_portfolio_default_page_manager_pages() {
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_portfolio_administration__panel_context_f3227908-8670-4a15-91b4-b6c19d8b7d61';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_portfolio_administration';
+  $handler->handler = 'panel_context';
+  $handler->weight = 1;
+  $handler->conf = array(
+    'title' => 'Aurora  Portfolio: Admin',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-admin ca-portfolio-admin',
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'CA Portfolio: Admin';
+  $display->uuid = '2c4c6190-ef0c-4cdb-aeef-e6e6f0298b12';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-32b8a4e8-70d1-4712-bf5e-4ff37ecbb4a0';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_portfolio_admin-ca_portfolio_admin';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '32b8a4e8-70d1-4712-bf5e-4ff37ecbb4a0';
+    $display->content['new-32b8a4e8-70d1-4712-bf5e-4ff37ecbb4a0'] = $pane;
+    $display->panels['first-first'][0] = 'new-32b8a4e8-70d1-4712-bf5e-4ff37ecbb4a0';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
   $pages['ca_portfolio_administration'] = $page;
 
   $page = new stdClass();
@@ -437,6 +570,74 @@ function ca_portfolio_default_page_manager_pages() {
     $pane->uuid = 'c3a88fab-96d0-439b-8e26-426eb9fefff4';
     $display->content['new-c3a88fab-96d0-439b-8e26-426eb9fefff4'] = $pane;
     $display->panels['middle'][0] = 'new-c3a88fab-96d0-439b-8e26-426eb9fefff4';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_portfolio_list_view__panel_context_8d512ef6-ba75-4ac1-b614-84fc00d900d0';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_portfolio_list_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = 1;
+  $handler->conf = array(
+    'title' => 'Aurora Portfolio: List One',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_portfolio_list_template',
+          'settings' => array(
+            'ca_portfolio_list_template' => 'ca_portfolio_list_template_one',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-portfolio-list ca-portfolio-list-template-1',
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '4d1cf074-d1af-4557-8317-0d1d1d8fb979';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-c3a88fab-96d0-439b-8e26-426eb9fefff4';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_portfolio_list-ca_portfolio_list_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c3a88fab-96d0-439b-8e26-426eb9fefff4';
+    $display->content['new-c3a88fab-96d0-439b-8e26-426eb9fefff4'] = $pane;
+    $display->panels['first-first'][0] = 'new-c3a88fab-96d0-439b-8e26-426eb9fefff4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
