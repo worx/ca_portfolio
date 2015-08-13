@@ -10,7 +10,8 @@
 function ca_portfolio_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ca_portfolio-field_ca_portfolio_p_screenshot'
+  // Exported field_instance:
+  // 'node-ca_portfolio-field_ca_portfolio_p_screenshot'
   $field_instances['node-ca_portfolio-field_ca_portfolio_p_screenshot'] = array(
     'bundle' => 'ca_portfolio',
     'deleted' => 0,
