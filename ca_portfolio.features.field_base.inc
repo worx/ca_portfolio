@@ -10,7 +10,7 @@
 function ca_portfolio_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_ca_portfolio_p_screenshot'
+  // Exported field_base: 'field_ca_portfolio_p_screenshot'.
   $field_bases['field_ca_portfolio_p_screenshot'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -32,7 +32,7 @@ function ca_portfolio_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ca_portfolio_p_website'
+  // Exported field_base: 'field_ca_portfolio_p_website'.
   $field_bases['field_ca_portfolio_p_website'] = array(
     'active' => 1,
     'cardinality' => 1,

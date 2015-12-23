@@ -11,7 +11,7 @@ function ca_portfolio_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'node-ca_portfolio-field_ca_portfolio_p_screenshot'
+  // 'node-ca_portfolio-field_ca_portfolio_p_screenshot'.
   $field_instances['node-ca_portfolio-field_ca_portfolio_p_screenshot'] = array(
     'bundle' => 'ca_portfolio',
     'deleted' => 0,
@@ -57,15 +57,13 @@ function ca_portfolio_field_default_field_instances() {
         'manualcrop_default_crop_area' => 1,
         'manualcrop_enable' => 1,
         'manualcrop_inline_crop' => 0,
-        'manualcrop_instant_crop' => 1,
+        'manualcrop_instant_crop' => 0,
         'manualcrop_instant_preview' => 1,
-        'manualcrop_keyboard' => TRUE,
-        'manualcrop_maximize_default_crop_area' => 0,
-        'manualcrop_require_cropping' => array(
-          'portfolio_medium' => 'portfolio_medium',
-        ),
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 1,
+        'manualcrop_require_cropping' => array(),
         'manualcrop_styles_list' => array(
-          'portfolio_medium' => 'portfolio_medium',
+          'crop_medium_square' => 'crop_medium_square',
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
@@ -77,7 +75,7 @@ function ca_portfolio_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ca_portfolio-field_ca_portfolio_p_website'
+  // Exported field_instance: 'node-ca_portfolio-field_ca_portfolio_p_website'.
   $field_instances['node-ca_portfolio-field_ca_portfolio_p_website'] = array(
     'bundle' => 'ca_portfolio',
     'default_value' => NULL,
