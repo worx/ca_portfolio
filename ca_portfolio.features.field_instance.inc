@@ -67,7 +67,7 @@ function ca_portfolio_field_default_field_instances() {
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
-        'preview_image_style' => 'portfolio_medium',
+        'preview_image_style' => 'crop_medium_square_preview',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
