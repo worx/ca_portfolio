@@ -63,8 +63,8 @@ function ca_portfolio_default_page_manager_handlers() {
   $display->cache = array();
   $display->title = '%node:title';
   $display->uuid = 'd905c30d-9589-4114-87b0-19be30d40e3b';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'ca_portfolio_node_view_panel_context';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -144,8 +144,8 @@ function ca_portfolio_default_page_manager_handlers() {
   $display->cache = array();
   $display->title = '%node:title';
   $display->uuid = '07c5259b-dc84-4c75-a495-5fa55fa7adda';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'ca_portfolio_node_view_panel_context2';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -321,8 +321,8 @@ function ca_portfolio_default_page_manager_pages() {
   $display->cache = array();
   $display->title = 'CA Portfolio: Admin';
   $display->uuid = '2c4c6190-ef0c-4cdb-aeef-e6e6f0298b12';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_ca_portfolio_administration_panel_context';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -422,8 +422,8 @@ function ca_portfolio_default_page_manager_pages() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = '4d1cf074-d1af-4557-8317-0d1d1d8fb979';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_ca_portfolio_list_view_panel_context';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -492,8 +492,8 @@ function ca_portfolio_default_page_manager_pages() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = '4d1cf074-d1af-4557-8317-0d1d1d8fb979';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_ca_portfolio_list_view__panel_context_8d512ef6-ba75-4ac1-b614-84fc00d900d0';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
