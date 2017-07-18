@@ -17,7 +17,7 @@ function ca_portfolio_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 0;
+  $handler->weight = -1;
   $handler->conf = array(
     'title' => 'CA Portfolio: Node Template One',
     'no_blocks' => 0,
@@ -98,7 +98,7 @@ function ca_portfolio_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 1;
+  $handler->weight = 0;
   $handler->conf = array(
     'title' => 'CA Portfolio: Node Template Two',
     'no_blocks' => 0,
@@ -171,6 +171,184 @@ function ca_portfolio_default_page_manager_handlers() {
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['ca_portfolio_node_view_panel_context2'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'node_view__aurora-portfolio-node-template-one';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -3;
+  $handler->conf = array(
+    'title' => 'Aurora Portfolio: Node Template One',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'ca_portfolio' => 'ca_portfolio',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_portfolio_node_template',
+          'settings' => array(
+            'ca_portfolio_node_template' => 'ca_portfolio_node_template_one',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-portfolio-node ca-portfolio-node-template-1',
+    'name' => 'aurora-portfolio-node-template-one',
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = 'd905c30d-9589-4114-87b0-19be30d40e3b';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'node_view__aurora-portfolio-node-template-one';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass();
+  $pane->pid = 'new-16eef4c4-057a-4eb4-8588-d18a5e37270f';
+  $pane->panel = 'first-first';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'ca_portfolio_node-ca_portfolio_node_1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '16eef4c4-057a-4eb4-8588-d18a5e37270f';
+  $display->content['new-16eef4c4-057a-4eb4-8588-d18a5e37270f'] = $pane;
+  $display->panels['first-first'][0] = 'new-16eef4c4-057a-4eb4-8588-d18a5e37270f';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['node_view__aurora-portfolio-node-template-one'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'node_view__aurora-portfolio-node-template-two';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -2;
+  $handler->conf = array(
+    'title' => 'Aurora Portfolio: Node Template Two',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'ca_portfolio' => 'ca_portfolio',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_portfolio_node_template',
+          'settings' => array(
+            'ca_portfolio_node_template' => 'ca_portfolio_node_template_two',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-portfolio-node ca-portfolio-node-template-2',
+    'name' => 'aurora-portfolio-node-template-two',
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = '07c5259b-dc84-4c75-a495-5fa55fa7adda';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'node_view__aurora-portfolio-node-template-two';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass();
+  $pane->pid = 'new-e224e080-2f04-40de-bb36-97fc41f3e204';
+  $pane->panel = 'first-first';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'ca_portfolio_node-ca_portfolio_node_2';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'e224e080-2f04-40de-bb36-97fc41f3e204';
+  $display->content['new-e224e080-2f04-40de-bb36-97fc41f3e204'] = $pane;
+  $display->panels['first-first'][0] = 'new-e224e080-2f04-40de-bb36-97fc41f3e204';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['node_view__aurora-portfolio-node-template-two'] = $handler;
 
   return $export;
 }
@@ -382,11 +560,184 @@ function ca_portfolio_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
+  $handler->name = 'page_ca_portfolio_list_view__panel_context_8d512ef6-ba75-4ac1-b614-84fc00d900d0';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_portfolio_list_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = -2;
+  $handler->conf = array(
+    'title' => 'Aurora Portfolio: List One',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_portfolio_list_template',
+          'settings' => array(
+            'ca_portfolio_list_template' => 'ca_portfolio_list_template_one',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-portfolio-list ca-portfolio-list-template-1',
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+      'first-first' => NULL,
+      'first-second' => NULL,
+      'first-third' => NULL,
+      'first-fourth' => NULL,
+      'first-fifth' => NULL,
+      'first-sixth' => NULL,
+      'second-first' => NULL,
+      'second-second' => NULL,
+      'second-third' => NULL,
+      'second-fourth' => NULL,
+      'second-fifth' => NULL,
+      'second-sixth' => NULL,
+      'third-first' => NULL,
+      'third-second' => NULL,
+      'third-third' => NULL,
+      'third-fourth' => NULL,
+      'third-fifth' => NULL,
+      'third-sixth' => NULL,
+      'fourth-first' => NULL,
+      'fourth-second' => NULL,
+      'fourth-third' => NULL,
+      'fourth-fourth' => NULL,
+      'fourth-fifth' => NULL,
+      'fourth-sixth' => NULL,
+      'fifth-first' => NULL,
+      'fifth-second' => NULL,
+      'fifth-third' => NULL,
+      'fifth-fourth' => NULL,
+      'fifth-fifth' => NULL,
+      'fifth-sixth' => NULL,
+      'sixth-first' => NULL,
+      'sixth-second' => NULL,
+      'sixth-third' => NULL,
+      'sixth-fourth' => NULL,
+      'sixth-fifth' => NULL,
+      'sixth-sixth' => NULL,
+      'seventh-first' => NULL,
+      'seventh-second' => NULL,
+      'seventh-third' => NULL,
+      'seventh-fourth' => NULL,
+      'seventh-fifth' => NULL,
+      'seventh-sixth' => NULL,
+      'eighth-first' => NULL,
+      'eighth-second' => NULL,
+      'eighth-third' => NULL,
+      'eighth-fourth' => NULL,
+      'eighth-fifth' => NULL,
+      'eighth-sixth' => NULL,
+      'ninth-first' => NULL,
+      'ninth-second' => NULL,
+      'ninth-third' => NULL,
+      'ninth-fourth' => NULL,
+      'ninth-fifth' => NULL,
+      'ninth-sixth' => NULL,
+      'tenth-first' => NULL,
+      'tenth-second' => NULL,
+      'tenth-third' => NULL,
+      'tenth-fourth' => NULL,
+      'tenth-fifth' => NULL,
+      'tenth-sixth' => NULL,
+      'eleventh-first' => NULL,
+      'eleventh-second' => NULL,
+      'eleventh-third' => NULL,
+      'eleventh-fourth' => NULL,
+      'eleventh-fifth' => NULL,
+      'eleventh-sixth' => NULL,
+      'twelfth-first' => NULL,
+      'twelfth-second' => NULL,
+      'twelfth-third' => NULL,
+      'twelfth-fourth' => NULL,
+      'twelfth-fifth' => NULL,
+      'twelfth-sixth' => NULL,
+      'thirteenth-first' => NULL,
+      'thirteenth-second' => NULL,
+      'thirteenth-third' => NULL,
+      'thirteenth-fourth' => NULL,
+      'thirteenth-fifth' => NULL,
+      'thirteenth-sixth' => NULL,
+      'fourteenth-first' => NULL,
+      'fourteenth-second' => NULL,
+      'fourteenth-third' => NULL,
+      'fourteenth-fourth' => NULL,
+      'fourteenth-fifth' => NULL,
+      'fourteenth-sixth' => NULL,
+      'fifteenth-first' => NULL,
+      'fifteenth-second' => NULL,
+      'fifteenth-third' => NULL,
+      'fifteenth-fourth' => NULL,
+      'fifteenth-fifth' => NULL,
+      'fifteenth-sixth' => NULL,
+      'sixteenth-first' => NULL,
+      'sixteenth-second' => NULL,
+      'sixteenth-third' => NULL,
+      'sixteenth-fourth' => NULL,
+      'sixteenth-fifth' => NULL,
+      'sixteenth-sixth' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '4d1cf074-d1af-4557-8317-0d1d1d8fb979';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_ca_portfolio_list_view__panel_context_8d512ef6-ba75-4ac1-b614-84fc00d900d0';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass();
+  $pane->pid = 'new-c3a88fab-96d0-439b-8e26-426eb9fefff4';
+  $pane->panel = 'first-first';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'ca_portfolio_list-ca_portfolio_list_1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'c3a88fab-96d0-439b-8e26-426eb9fefff4';
+  $display->content['new-c3a88fab-96d0-439b-8e26-426eb9fefff4'] = $pane;
+  $display->panels['first-first'][0] = 'new-c3a88fab-96d0-439b-8e26-426eb9fefff4';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
   $handler->name = 'page_ca_portfolio_list_view_panel_context';
   $handler->task = 'page';
   $handler->subtask = 'ca_portfolio_list_view';
   $handler->handler = 'panel_context';
-  $handler->weight = 0;
+  $handler->weight = -1;
   $handler->conf = array(
     'title' => 'CA Portfolio: List View Template One',
     'no_blocks' => 0,
@@ -445,76 +796,6 @@ function ca_portfolio_default_page_manager_pages() {
   $pane->uuid = 'c3a88fab-96d0-439b-8e26-426eb9fefff4';
   $display->content['new-c3a88fab-96d0-439b-8e26-426eb9fefff4'] = $pane;
   $display->panels['middle'][0] = 'new-c3a88fab-96d0-439b-8e26-426eb9fefff4';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
-  $handler->conf['display'] = $display;
-  $page->default_handlers[$handler->name] = $handler;
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
-  $handler->api_version = 1;
-  $handler->name = 'page_ca_portfolio_list_view__panel_context_8d512ef6-ba75-4ac1-b614-84fc00d900d0';
-  $handler->task = 'page';
-  $handler->subtask = 'ca_portfolio_list_view';
-  $handler->handler = 'panel_context';
-  $handler->weight = 1;
-  $handler->conf = array(
-    'title' => 'Aurora Portfolio: List One',
-    'no_blocks' => 0,
-    'pipeline' => 'standard',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
-    'relationships' => array(),
-    'access' => array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'ca_portfolio_list_template',
-          'settings' => array(
-            'ca_portfolio_list_template' => 'ca_portfolio_list_template_one',
-          ),
-          'not' => FALSE,
-        ),
-      ),
-      'logic' => 'and',
-    ),
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-portfolio-list ca-portfolio-list-template-1',
-  );
-  $display = new panels_display();
-  $display->layout = 'worx_aurora';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'middle' => NULL,
-    ),
-  );
-  $display->cache = array();
-  $display->title = '';
-  $display->uuid = '4d1cf074-d1af-4557-8317-0d1d1d8fb979';
-  $display->storage_type = 'page_manager';
-  $display->storage_id = 'page_ca_portfolio_list_view__panel_context_8d512ef6-ba75-4ac1-b614-84fc00d900d0';
-  $display->content = array();
-  $display->panels = array();
-  $pane = new stdClass();
-  $pane->pid = 'new-c3a88fab-96d0-439b-8e26-426eb9fefff4';
-  $pane->panel = 'first-first';
-  $pane->type = 'views_panes';
-  $pane->subtype = 'ca_portfolio_list-ca_portfolio_list_1';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array();
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = 'c3a88fab-96d0-439b-8e26-426eb9fefff4';
-  $display->content['new-c3a88fab-96d0-439b-8e26-426eb9fefff4'] = $pane;
-  $display->panels['first-first'][0] = 'new-c3a88fab-96d0-439b-8e26-426eb9fefff4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
