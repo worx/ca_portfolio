@@ -3,6 +3,7 @@
 .worx-aurora.ca-portfolio-list-template-1 .views-row {
   flex: 0 1 25%;
   text-align: center;
+  padding: 0 5px;
 }
 
 @media only screen and (min-width: 641px) {
