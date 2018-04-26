@@ -1,1 +1,13 @@
 .pane-ca-portfolio-list-ca-portfolio-list-1 .views-field-title {text-align: center; max-width: 220px;}
+
+.worx-aurora.ca-portfolio-list-template-1 .views-row {
+  flex: 0 1 25%;
+  text-align: center;
+}
+
+@media only screen and (min-width: 641px) {
+  .worx-aurora.ca-portfolio-list-template-1 .view-content {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
