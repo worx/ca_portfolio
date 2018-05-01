@@ -169,8 +169,7 @@ function ca_portfolio_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '12';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['columns'] = '3';
+  $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
@@ -236,9 +235,15 @@ function ca_portfolio_views_default_views() {
     'ca_portfolio' => 'ca_portfolio',
   );
 
+  /* Display: CA Portfolio: Grid Template One */
+  $handler = $view->new_display('panel_pane', 'CA Portfolio: Grid Template One', 'ca_portfolio_grid_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['pane_title'] = 'CA Portfolio: Grid Template One';
+  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+
   /* Display: CA Portfolio: List Template One */
   $handler = $view->new_display('panel_pane', 'CA Portfolio: List Template One', 'ca_portfolio_list_1');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pane_title'] = 'CA Portfolio: List Template One';
   $handler->display->display_options['pane_category']['name'] = 'CA List';
   $handler->display->display_options['pane_category']['weight'] = '0';

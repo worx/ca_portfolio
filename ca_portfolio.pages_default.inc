@@ -778,10 +778,10 @@ function ca_portfolio_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-c3a88fab-96d0-439b-8e26-426eb9fefff4';
+  $pane->pid = 'new-6c1e614d-9f91-43d4-8ad5-c56d48e921fb';
   $pane->panel = 'middle';
   $pane->type = 'views_panes';
-  $pane->subtype = 'ca_portfolio_list-ca_portfolio_list_1';
+  $pane->subtype = 'ca_portfolio_list-ca_portfolio_grid_1';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array();
@@ -793,9 +793,9 @@ function ca_portfolio_default_page_manager_pages() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'c3a88fab-96d0-439b-8e26-426eb9fefff4';
-  $display->content['new-c3a88fab-96d0-439b-8e26-426eb9fefff4'] = $pane;
-  $display->panels['middle'][0] = 'new-c3a88fab-96d0-439b-8e26-426eb9fefff4';
+  $pane->uuid = '6c1e614d-9f91-43d4-8ad5-c56d48e921fb';
+  $display->content['new-6c1e614d-9f91-43d4-8ad5-c56d48e921fb'] = $pane;
+  $display->panels['middle'][0] = 'new-6c1e614d-9f91-43d4-8ad5-c56d48e921fb';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
